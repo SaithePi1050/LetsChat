@@ -9,3 +9,8 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
       //End code
       });});}
 getData();
+function add_room() 
+{
+      var room_name = document.getElementById("room_name").value;
+      firebase.database().ref("/").child(room_name).update({Purpose : "1", Purpose1 : "2"});
+}
