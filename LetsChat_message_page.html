@@ -1,1 +1,56 @@
-<h1>Gamming<h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwitter Room</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>const firebaseConfig = {
+	apiKey: "AIzaSyD6yDvjfQmCsD--6Bd94ohv2_Ehhq642qk",
+	authDomain: "letschat-9d583.firebaseapp.com",
+	databaseURL: "https://letschat-9d583-default-rtdb.firebaseio.com",
+	projectId: "letschat-9d583",
+	storageBucket: "letschat-9d583.appspot.com",
+	messagingSenderId: "439615217360",
+	appId: "1:439615217360:web:970544a1ba04a551ad88d5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button>
+	<center>
+		<h1 class="header">	
+			LetsChat	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+        <div id = "output" style="text-align: left; margin-bottom: 60px;"></div>
+    </center>
+</div>
+<center>
+    <div class="input_div_message_page">
+        <br>
+        <label>Sent</label>
+        <br>
+        <input type="text" placeholder="Type here" class="form-control" id="msg">
+        <button onclick="send()" class="btn btn-primary">Send Message</button>
+        <br>
+        <br>
+    </div>
+</center>
+<script src="message.js"></script>
+</body>
+</html>
